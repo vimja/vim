@@ -1,6 +1,10 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+set laststatus=2
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+
+nnoremap <F5> :GundoToggle<CR>
 "appearance
 set t_Co=256
 colorscheme molokai
