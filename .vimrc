@@ -4,8 +4,8 @@ call pathogen#helptags()
 set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
-nnoremap <F1> :GundoToggle<CR>
-nnoremap <F3> :reg<CR>
+nnoremap <C-\> :GundoToggle<CR>
+nnoremap <F1> :reg<CR>
 "appearance
 set t_Co=256
 colorscheme molokai
