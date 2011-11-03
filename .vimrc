@@ -1,44 +1,37 @@
+set nocompatible
+
 call pathogen#infect()
 call pathogen#helptags()
 
 set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
-nnoremap <C-\> :GundoToggle<CR>
-nnoremap <F1> :reg<CR>
-"appearance
 set t_Co=256
 colorscheme molokai
-"colorscheme mayansmoke
-syntax on
+set hidden "buffers
+set diffopt+=iwhite
 
 set undofile
-set number
-set showmode "show current mode
+set number showmode 
 let loaded_matchparen=1 "turn off parenthesis highlighting
 
-"vi compatibility
-"set vb "no visual bell
-set nocompatible
-
-"editing
-set smartindent
-set tabstop=4
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set backspace=2
+set autoindent smartindent 
+set tabstop=4 expandtab shiftwidth=4 softtabstop=4 backspace=2
+set incsearch ignorecase smartcase wrapscan hlsearch 
 
 "filetypes
 filetype plugin on
 filetype indent on
 filetype on
-
+syntax on
 
 "shortcuts
-imap jj <Esc>
-map <Tab> :NERDTreeToggle<CR> "backtick toggle nerdtree
-map ! :Tlist<CR>  "exclamation mark toggle taglist
+map <Tab> :NERDTreeToggle<CR> 
+map ! :Tlist<CR>  
+map <C-b> :ConqueTerm zsh<CR>
+nnoremap <C-\> :GundoToggle<CR>
+
+nnoremap <F1> :reg<CR>
 map <CR> o<Esc> 
 
 "split panel resizing
@@ -49,42 +42,4 @@ if bufwinnr(1)
     map > <C-W>>
 endif
 
-"ConqueTerm
-map <C-b> :ConqueTerm bash<CR>
-"imap ll <Esc>Gdggi<C-l>i<CR>
-"nmap <C-l> iclear<CR><Esc>Gdggi<CR><CR>
-
-
-"search
-set incsearch
-set ignorecase
-set smartcase
-set wrapscan
-set hlsearch "highlight
-
-"buffers
-set hidden
-
-"code folding
-"set foldenable
-"set fdm=syntax
-"set fdm=indent
-nnoremap <space> za
-
-"vimdiff
-set diffopt+=iwhite
-
-
-
-
-"plugins ===
-"
-"nerdtree
-"taglist
-"surround
-"supertab
-"snipmate
-"align
-"matchit
-"bufexplorer
 
