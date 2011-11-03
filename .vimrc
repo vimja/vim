@@ -4,7 +4,8 @@ call pathogen#helptags()
 set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <F1> :GundoToggle<CR>
+nnoremap <F3> :reg<CR>
 "appearance
 set t_Co=256
 colorscheme molokai
@@ -38,7 +39,6 @@ filetype on
 imap jj <Esc>
 map <Tab> :NERDTreeToggle<CR> "backtick toggle nerdtree
 map ! :Tlist<CR>  "exclamation mark toggle taglist
-"map <S-CR> O<Esc> 
 map <CR> o<Esc> 
 
 "split panel resizing
