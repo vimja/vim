@@ -36,7 +36,7 @@ filetype on
 
 "shortcuts
 imap jj <Esc>
-map ` :NERDTreeToggle<CR> "backtick toggle nerdtree
+map <Tab> :NERDTreeToggle<CR> "backtick toggle nerdtree
 map ! :Tlist<CR>  "exclamation mark toggle taglist
 "map <S-CR> O<Esc> 
 map <CR> o<Esc> 
